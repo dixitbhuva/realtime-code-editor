@@ -5,6 +5,7 @@ import 'codemirror/theme/dracula.css';
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/addon/edit/closetag';
 import 'codemirror/addon/edit/closebrackets';
+import 'codemirror/keymap/vim';
 import ACTIONS from '../Actions';
 
 const Editor = ({ socketRef, roomId, onCodeChange }) => {
@@ -19,6 +20,7 @@ const Editor = ({ socketRef, roomId, onCodeChange }) => {
                     autoCloseTags: true,
                     autoCloseBrackets: true,
                     lineNumbers: true,
+                    keyMap: 'vim',
                 }
             );
 
